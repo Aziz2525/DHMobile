@@ -9,28 +9,32 @@ const Borsa = (props) => {
           <Text>ALGYO</Text>
           <View style={styles.cardRight}>
             <Text>{props.data["ALGYO"].satis}</Text>
-            <Text>{props.data["ALGYO"].degisim}</Text>
+ 
+          <Text style={{color:parseFloat(props.data.ALGYO.degisim.replace(',','.'))>=0?'green':'red'}}>{parseFloat(props.data.ALGYO.degisim.replace(',','.'))}</Text>
+
           </View>
         </View>
         <View style={styles.card}>
           <Text>ARZUM</Text>
           <View style={styles.cardRight}>
             <Text>{props.data["ARZUM"].satis}</Text>
-            <Text>{props.data["ARZUM"].degisim}</Text>
+          <Text style={{color:parseFloat(props.data.ARZUM.degisim.replace(',','.'))>=0?'green':'red'}}>{parseFloat(props.data.ARZUM.degisim.replace(',','.'))}</Text>
+
           </View>
         </View>
         <View style={styles.card}>
           <Text>ACSEL</Text>
           <View style={styles.cardRight}>
             <Text>{props.data["ACSEL"].satis}</Text>
-            <Text>{props.data["ACSEL"].degisim}</Text>
+          <Text style={{color:parseFloat(props.data.ACSEL.degisim.replace(',','.'))>=0?'green':'red'}}>{parseFloat(props.data.ACSEL.degisim.replace(',','.'))}</Text>
+
           </View>
         </View>
         <View style={styles.card}>
           <Text>ADANA</Text>
           <View style={styles.cardRight}>
             <Text>{props.data["ADANA"].satis}</Text>
-            <Text>{props.data["ADANA"].degisim}</Text>
+            <Text style={{color:parseFloat(props.data.ADANA.degisim.replace(',','.'))>=0?'green':'red'}}>{parseFloat(props.data.ADANA.degisim.replace(',','.'))}</Text>
           </View>
         </View>
         

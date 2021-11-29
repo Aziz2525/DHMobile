@@ -9,28 +9,30 @@ const ParaBirimleri = (props) => {
         <Text>Amerikan Doları</Text>
         <View style={styles.cardRight}>
           <Text>{props.data.USD.satis}</Text>
-          <Text>{props.data.USD.degisim}</Text>
+          <Text style={{color:parseFloat(props.data.USD.degisim.replace(',','.'))>0?'green':'red'}}>{parseFloat(props.data.USD.degisim.replace(',','.'))}</Text>
         </View>
       </View>
       <View style={styles.card}>
         <Text>Euro</Text>
         <View style={styles.cardRight}>
           <Text>{props.data.EUR.satis}</Text>
-          <Text>{props.data.EUR.degisim}</Text>
+          <Text style={{color:parseFloat(props.data.EUR.degisim.replace(',','.'))>=0?'green':'red'}} >{parseFloat(props.data.EUR.degisim.replace(',','.'))}</Text>
         </View>
       </View>
       <View style={styles.card}>
         <Text>Sterlin</Text>
         <View style={styles.cardRight}>
           <Text>{props.data.GBP.satis}</Text>
-          <Text>{props.data.GBP.degisim}</Text>
+          <Text style={{color:parseFloat(props.data.GBP.degisim.replace(',','.'))>0?'green':'red'}}>{parseFloat(props.data.GBP.degisim.replace(',','.'))}</Text>
+
         </View>
       </View>
       <View style={styles.card}>
         <Text>Bitcoin</Text>
         <View style={styles.cardRight}>
           <Text>{props.data.BTC.satis}</Text>
-          <Text>{props.data.BTC.degisim}</Text>
+          <Text style={{color:parseFloat(props.data.BTC.degisim.replace(',','.'))>0?'green':'red'}}>{parseFloat(props.data.BTC.degisim.replace(',','.'))}</Text>
+
         </View>
       </View>
       <TouchableOpacity style={styles.btn} onPress={()=>alert('dd')}>

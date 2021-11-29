@@ -9,28 +9,31 @@ const Altin = (props) => {
         <Text>Gram Altın</Text>
         <View style={styles.cardRight}>
           <Text>{props.data["GA"].satis}</Text>
-          <Text>{props.data["GA"].degisim}</Text>
+          <Text style={{color:parseFloat(props.data.GA.degisim.replace(',','.'))>=0?'green':'red'}}>{parseFloat(props.data.GA.degisim.replace(',','.'))}</Text>
+
         </View>
       </View>
       <View style={styles.card}>
         <Text>Çeyrek Altın</Text>
         <View style={styles.cardRight}>
           <Text>{props.data["C"].satis}</Text>
-          <Text>{props.data["C"].degisim}</Text>
+          <Text style={{color:parseFloat(props.data.C.degisim.replace(',','.'))>=0?'green':'red'}}>{parseFloat(props.data.C.degisim.replace(',','.'))}</Text>
+
         </View>
       </View>
       <View style={styles.card}>
         <Text>Yarım Altın</Text>
         <View style={styles.cardRight}>
           <Text>{props.data["Y"].satis}</Text>
-          <Text>{props.data["Y"].degisim}</Text>
+          <Text style={{color:parseFloat(props.data.Y.degisim.replace(',','.'))>=0?'green':'red'}}>{parseFloat(props.data.Y.degisim.replace(',','.'))}</Text>
         </View>
       </View>
       <View style={styles.card}>
         <Text>Tam Altın</Text>
         <View style={styles.cardRight}>
           <Text>{props.data["T"].satis}</Text>
-          <Text>{props.data["Y"].degisim}</Text>
+          <Text style={{color:parseFloat(props.data.T.degisim.replace(',','.'))>=0?'green':'red'}}>{parseFloat(props.data.T.degisim.replace(',','.'))}</Text>
+
         </View>
       </View>
       

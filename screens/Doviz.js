@@ -39,6 +39,7 @@ const styles = StyleSheet.create({
         backgroundColor:'white'
       },    
       contentContainerStyle:{
-          backgroundColor:theme.style.bgColor
+          backgroundColor:theme.style.bgColor,
+          marginTop:100
       },
 });
